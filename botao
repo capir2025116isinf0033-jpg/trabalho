@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html lang="PT-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <title>pagina</title>
+    </head>
+
+    <body style="background-color: wheat;">
+        <h1>Meu site</h1>
+        <main>
+            <section>
+                <h2>minha pagina</h2>
+                <button onclick="bemvindo()">Botão</button>
+
+                <button onclick="jose()">clique aqui</button>
+                <p id="saida">12345</p>
+
+                <input type="number" id="idade" placeholder="digite sua idade...">
+                <button onclick="idade()">enviar</button>
+                <p id="resultado">Você é:</p>
+
+                <button onclick="numeros()">1 a 10</button>
+                <div id="1a10" style="margin-top: 15px; font-family: sans-serif;"></div>
+            </section>
+        </main>
+
+        <script >
+            function bemvindo(){
+                alert("bem vindo")
+            }
+            
+            function jose() {
+                document.getElementById("saida").innerText="67890";
+        }
+            function idade() {
+                let idade = document.getElementById("idade").value;
+                if (idade >= 18)
+                    document.getElementById("resultado").innerText="Você é: Maior de idade";
+                if (idade < 18)
+                    document.getElementById("resultado").innerText="Você é: Menor de idade";
+            } 
+            function Numeros() {
+                let numeros = "";
+                    for (let i = 1; i <= 10; i++) {
+                        numeros += i + "<br>";
+                    }
+                    document.getElementById("1a10").innerHTML = numeros;
+            }
+        </script>
+    </body>
+    </html>
