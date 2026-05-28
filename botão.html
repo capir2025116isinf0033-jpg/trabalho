@@ -4,61 +4,59 @@
     <head>
         <meta charset="utf-8">
         <title>pagina</title>
-    </style>
-
     </head>
 
-    <body>
-        <h1 style="text-align: center ;">Meu site</h1>
-        
-        <div style="background-color:darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-            <p>Botão com mensagem</p>
-            <button onclick="bemvindo()">Botão</button>
-        </div>
+    <body style="font-family: Arial, Helvetica, sans-serif; margin: 15px; background-color: antiquewhite;">
+        <h1 style="text-align: center ; background-color: darkolivegreen; padding: 10px; border-radius: 15px;">Meu site</h1>
+
+        <h3>Botão com mensagem</h3>
+            <div style="background-color:darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
+                <button onclick="bemvindo()" style="padding: 10px 20px; font-size: 20px; border-radius: 15px;">clique aqui</button>
+            </div>
 
         <h3>Alteração de texto na tela</h3>
-        <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-            <button onclick="jose()">clique aqui</button>
-            <p id="saida">12345</p>
-        </div>
+            <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
+                <button onclick="jose()">clique aqui</button>
+                <p id="saida">texto</p>
+            </div>
 
         <h3>Verificação de idade (condicional)</h3>
-        <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-            <input type="number" id="idade" placeholder="digite sua idade...">
-            <button onclick="idade()">enviar</button>
-            <p id="resultado">Você é:</p>
-        </div>
+            <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
+                <input type="number" id="idade" placeholder="digite sua idade...">
+                <button onclick="idade()">enviar</button>
+                <p id="resultado">Você é:</p>
+            </div>
         
         <h3>Contador com laço</h3>
-        <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-            <button onclick="Numeros()">1 a 10</button>
-            <div id="numero" style="margin-top: 15px; font-family: sans-serif;"></div>
-        </div>
+            <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
+                <button onclick="Numeros()">1 a 10</button>
+                <div id="numero" style="margin-top: 15px; font-family: sans-serif;"></div>
+            </div>
 
         <h3>Verificador de Notas</h3>
-        <div class="container" style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-            <input type="number" id="Nota" placeholder="Digite a nota (0 a 10)" step="0.1" min="0" max="10">
-            <br>
-            <button onclick="verificarNota()">Verificar</button>
-            <p id="nota"></p>
-        </div>
+            <div class="container" style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
+                <input type="number" id="Nota" placeholder="Digite a nota (0 a 10)" step="0.1" min="0" max="10">
+                <br>
+                <button onclick="verificarNota()">Verificar</button>
+                <p id="nota"></p>
+            </div>
 
         <script >
-            function bemvindo(){
+            function bemvindo(){ //Botão com mensagem
                 alert("bem vindo")
             }
             
-            function jose() {
-                document.getElementById("saida").innerText="67890";
+            function jose() { //Alteração de texto na tela
+                document.getElementById("saida").innerText="alterado";
             }
-            function idade() {
+            function idade() { //Verificação de idade (condicional)
                 let idade = document.getElementById("idade").value;
                 if (idade >= 18)
                     document.getElementById("resultado").innerText="Você é: Maior de idade";
                 if (idade < 18)
                     document.getElementById("resultado").innerText="Você é: Menor de idade";
             } 
-            function Numeros() {
+            function Numeros() { //Contador com laço
                 let numeros = "";
                     for (let i = 1; i <= 10; i++) {
                         numeros += i + "<br>";
@@ -66,7 +64,7 @@
                     document.getElementById("numero").innerHTML = numeros;
             }
 
-            function verificarNota() {
+            function verificarNota() { //Verificador de Notas
                 let inputNota = document.getElementById("Nota").value;
                 let nota = parseFloat(inputNota);
 
