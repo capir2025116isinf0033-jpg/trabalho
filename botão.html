@@ -1,87 +1,86 @@
 <!DOCTYPE html>
-    <html lang="PT-BR">
-
+<html lang="pt-br">
     <head>
-        <meta charset="utf-8">
-        <title>pagina</title>
+        <meta charset="utf-8" />
+        <title>inicio</title>
     </head>
 
-    <body style="font-family: Arial, Helvetica, sans-serif; margin: 15px; background-color: antiquewhite;">
-        <h1 style="text-align: center ; background-color: darkolivegreen; padding: 10px; border-radius: 15px;">Meu site</h1>
+    <body style="background-color: #ffecc9; font-family: Arial, sans-serif; padding: 50px;margin: 20px;">
+         <!-- Cabeçalho -->
+        <header>
+            <h1></h1>
+            <nav>
+                <a href="./index.html">Poções</a>
+                <a href="">Suporte de poções</a>
+            </nav>
+        </header>
 
-        <h3>Botão com mensagem</h3>
-            <div style="background-color:darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-                <button onclick="bemvindo()" style="padding: 10px 20px; font-size: 20px; border-radius: 15px;">clique aqui</button>
-            </div>
+        <!-- Conteúdo -->
+        <main>
+            <article style="padding-right: 50%;border: #ffecc9;">
+                
+                <h2>Poções</h2>
+                <p>Poções são substâncias engarrafadas. Que muitas delas são itens fermentáveis 
+                    queconcebem efeitos de tempo específico limitado.</p>
+                <p>são líquidos engarrafados que concedem aos jogadores habilidades especiais, 
+                    como regeneração, invisibilidade e aumento de força</p>
+                
+                <h2>criação</h2>
+                <p>Para criar poções no Minecraft, você precisará coletar varas de blaze e pedregulhos para 
+                    fabricar um Suporte de Poções (Brewing Stand). Em seguida, posicione frascos de vidro 
+                    cheios de água e adicione Pó de Blaze como combustível para iniciar o processo de alquimia</p>
+                
+                <h2>Poções</h2>
 
-        <h3>Alteração de texto na tela</h3>
-            <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-                <button onclick="jose()">clique aqui</button>
-                <p id="saida">texto</p>
-            </div>
+                    <h4>Efeitos positivos</h4>
+                    <table border="3">
+                        <tr style="text-align: center;">
+                            <td><button>Regeneração</button></td>
+                            <td><button>Agilidade</button></td>
+                            <td><button>Resistência ao fogo</button></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td><button>Cura</button></td>
+                            <td><button>Visão noturna</button></td>
+                            <td><button>Força</button></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td><button>Salto</button></td>
+                            <td><button>Respiração aquática</button></td>
+                            <td><button>Invisibilidade</button></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td><button>Queda lenta</button></td>
+                        </tr>
+                    </table>
+                    
+                    <h4>Efeitos negativos</h4>
+                    <table border="3">
+                        <tr style="text-align: center;">
+                            <td><button>Veneno</button></td>
+                            <td><button>Fraqueza</button></td>
+                            <td><button>Lentidão</button></td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td><button>Levitação</button></td>
+                            <td><button>Dano</button></td>
+                            <td><button>Decaimento</button></td>
+                        </tr>
+                    </table>
 
-        <h3>Verificação de idade (condicional)</h3>
-            <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-                <input type="number" id="idade" placeholder="digite sua idade...">
-                <button onclick="idade()">enviar</button>
-                <p id="resultado">Você é:</p>
-            </div>
-        
-        <h3>Contador com laço</h3>
-            <div style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-                <button onclick="Numeros()">1 a 10</button>
-                <div id="numero" style="margin-top: 15px; font-family: sans-serif;"></div>
-            </div>
+                    <h4>Efeito misto</h4>
+                    <table border="3">
+                        <tr style="text-align: center;">
+                            <td><button> mestre-tartaruga</button></td>
+                        </tr>
+                    </table>
+                  
+            </article>
+        </main>
 
-        <h3>Verificador de Notas</h3>
-            <div class="container" style="background-color: darkgreen; padding: 10px; border-radius: 15px; width: 25%;">
-                <input type="number" id="Nota" placeholder="Digite a nota (0 a 10)" step="0.1" min="0" max="10">
-                <br>
-                <button onclick="verificarNota()">Verificar</button>
-                <p id="nota"></p>
-            </div>
+        <footer>
+            <p></p>
+        </footer>
 
-        <script >
-            function bemvindo(){ //Botão com mensagem
-                alert("bem vindo")
-            }
-            
-            function jose() { //Alteração de texto na tela
-                document.getElementById("saida").innerText="alterado";
-            }
-            function idade() { //Verificação de idade (condicional)
-                let idade = document.getElementById("idade").value;
-                if (idade >= 18)
-                    document.getElementById("resultado").innerText="Você é: Maior de idade";
-                if (idade < 18)
-                    document.getElementById("resultado").innerText="Você é: Menor de idade";
-            } 
-            function Numeros() { //Contador com laço
-                let numeros = "";
-                    for (let i = 1; i <= 10; i++) {
-                        numeros += i + "<br>";
-                    }
-                    document.getElementById("numero").innerHTML = numeros;
-            }
-
-            function verificarNota() { //Verificador de Notas
-                let inputNota = document.getElementById("Nota").value;
-                let nota = parseFloat(inputNota);
-
-                if (isNaN(nota) || nota < 0 || nota > 10) {
-                    alert("Por favor, digite uma nota válida entre 0 e 10.");
-                    return;
-                }
-
-                let resultadoTexto = "";
-                if (nota >= 6) {
-                    resultadoTexto = "Aprovado";
-                } else {
-                    resultadoTexto = "Reprovado";
-                }
-
-                    document.getElementById("nota").innerText = "Status: " + resultadoTexto;
-            }
-        </script>
     </body>
-    </html>
+</html>
