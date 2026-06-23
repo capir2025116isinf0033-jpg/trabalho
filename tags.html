@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Tags HTML</title>
+
+    <link rel="stylesheet" href="#">
+
+    <style>
+        /* Página */
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 20px;
+          line-height: 1.6;
+      }
+      
+      /* Cabeçalho */
+      header {
+          background-color: #333;
+          color: white;
+          padding: 20px;
+          text-align: center;
+      }
+      
+      nav a {
+          color: white;
+          text-decoration: none;
+          margin: 0 10px;
+      }
+      
+      nav a:hover {
+          text-decoration: underline;
+      }
+      
+      /* Conteúdo principal */
+      main {
+          max-width: 1000px;
+          margin: auto;
+      }
+
+      /* Seções */
+      section {
+          background-color: white;
+          margin: 20px 0;
+          padding: 20px;
+          border-radius: 10px;
+      }
+      
+      /* Títulos */
+      h1 {
+          font-size: 2.5em;
+      }
+      
+      h2 {
+          color: #0066cc;
+          border-bottom: 2px solid #0066cc;
+          padding-bottom: 5px;
+      }
+      
+      h3, h4, h5, h6 {
+          color: #444;
+      }
+      
+      /* Texto */
+      p {
+          color: #333;
+      }
+      
+      strong {
+          color: darkred;
+      }
+      
+      em {
+          color: darkgreen;
+      }
+
+      mark {
+          background-color: yellow;
+      }
+      
+      /* Linha horizontal */
+      hr {
+          border: none;
+          height: 2px;
+          background-color: #ccc;
+      }
+      
+      /* Imagens */
+      img {
+          max-width: 100%;
+          border-radius: 10px;
+      }
+      
+      figure {
+          text-align: center;
+      }
+      
+      figcaption {
+          font-style: italic;
+          margin-top: 10px;
+      }
+      
+      /* Listas */
+      ul {
+          list-style-type: square;
+      }
+      
+      ol {
+          list-style-type: decimal;
+      }
+      
+      li {
+          margin-bottom: 5px;
+      }
+
+      /* Tabelas */
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+      
+      th {
+          background-color: #0066cc;
+          color: white;
+      }
+      
+      th,
+      td {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: center;
+      }
+      
+      tr:nth-child(even) {
+          background-color: #f9f9f9;
+      }
+      
+      /* Formulários */
+      form {
+          margin-top: 20px;
+      }
+      
+      fieldset {
+          border: 2px solid #0066cc;
+          border-radius: 8px;
+          padding: 15px;
+      }
+      
+      legend {
+          font-weight: bold;
+      }
+      
+      input,
+      select,
+      textarea {
+          width: 100%;
+          padding: 8px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          box-sizing: border-box;
+      }
+
+      button {
+          background-color: #0066cc;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      
+      button:hover {
+          background-color: #004999;
+      }
+      
+      /* Div e Span */
+      div {
+          background-color: #e6f2ff;
+          padding: 15px;
+          border-radius: 8px;
+      }
+      
+      span {
+          color: red;
+          font-weight: bold;
+      }
+      
+      /* Multimídia */
+      audio,
+      video,
+      iframe {
+          width: 100%;
+          margin-top: 10px;
+          border-radius: 8px;
+      }
+
+      /* Article e Aside */
+      article {
+          background-color: #eef;
+          padding: 15px;
+          border-left: 5px solid blue;
+      }
+      
+      aside {
+          background-color: #fff3cd;
+          padding: 15px;
+          border-left: 5px solid orange;
+          margin-top: 10px;
+      }
+      
+      /* Details */
+      details {
+          background-color: #f8f9fa;
+          padding: 10px;
+          border-radius: 5px;
+      }
+      
+      summary {
+          cursor: pointer;
+          font-weight: bold;
+      }
+      
+      /* Código */
+      pre {
+          background-color: #222;
+          color: white;
+          padding: 15px;
+          overflow-x: auto;
+          border-radius: 5px;
+      }
+      
+      code {
+          color: #00ff88;
+      }
+
+      /* Citação */
+      blockquote {
+          border-left: 5px solid gray;
+          padding-left: 15px;
+          font-style: italic;
+      }
+      
+      /* Endereço */
+      address {
+          background-color: #f1f1f1;
+          padding: 10px;
+          border-radius: 5px;
+      }
+      
+      /* Rodapé */
+      footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 15px;
+          margin-top: 20px;
+      }
+    </style>
+
+    <script>
+        function mostrarMensagem() {
+            alert("Botão clicado!");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Título Principal (h1)</h1>
+        <nav>
+            <a href="#secao1">Seção 1</a> |
+            <a href="#secao2">Seção 2</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="secao1">
+            <h2>Títulos e Textos</h2>
+
+            <p>Este é um <strong>texto importante</strong>.</p>
+            <p>Este é um texto em <b>negrito</b>.</p>
+            <p>Este é um texto em <em>itálico semântico</em>.</p>
+            <p>Este é um texto em <i>itálico</i>.</p>
+            <p>Texto <u>sublinhado</u>.</p>
+            <p>Texto <mark>destacado</mark>.</p>
+            <p>Texto <small>pequeno</small>.</p>
+            <p>X<sup>2</sup></p>
+            <p>H<sub>2</sub>O</p>
+
+            <br>
+            <hr>
+        </section>
+
+        <section id="secao2">
+
+            <h2>Imagem e Figura</h2>
+
+            <figure>
+                <img src="https://via.placeholder.com/150" alt="Imagem de exemplo">
+                <figcaption>Legenda da imagem</figcaption>
+            </figure>
+
+            <h2>Listas</h2>
+
+            <ul>
+                <li>Item da lista não ordenada</li>
+                <li>Outro item</li>
+            </ul>
+
+            <ol>
+                <li>Primeiro item</li>
+                <li>Segundo item</li>
+            </ol>
+
+            <dl>
+                <dt>HTML</dt>
+                <dd>Linguagem de marcação.</dd>
+            </dl>
+
+            <h2>Tabela</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>José</td>
+                        <td>16</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Fim da tabela</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h2>Formulário</h2>
+
+            <form>
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome">
+
+                    <br><br>
+
+                    <label for="cidade">Cidade:</label>
+
+                    <select id="cidade">
+                        <option>Nova Russas</option>
+                        <option>Fortaleza</option>
+                    </select>
+
+                    <br><br>
+
+                    <textarea rows="4" cols="30">
+                        Digite algo aqui...
+                    </textarea>
+
+                    <br><br>
+
+                    <button type="button" onclick="mostrarMensagem()">
+                        Enviar
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+            <h2>Div e Span</h2>
+
+            <div>
+                Esta é uma DIV com um
+                <span>SPAN dentro dela</span>.
+            </div>
+
+            <h2>Áudio</h2>
+
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+
+            <h2>Vídeo</h2>
+
+            <video width="320" controls>
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+
+            <h2>Iframe</h2>
+
+            <iframe
+                src="https://www.example.com"
+                width="400"
+                height="200">
+            </iframe>
+
+            <h2>Outras Tags Semânticas</h2>
+
+            <article>
+                Este é um artigo.
+            </article>
+
+            <aside>
+                Conteúdo lateral.
+            </aside>
+
+            <details>
+                <summary>Clique para expandir</summary>
+                Conteúdo oculto exibido após clicar.
+            </details>
+
+            <p>
+                Data:
+                <time datetime="2026-06-23">
+                    23/06/2026
+                </time>
+            </p>
+
+            <p>
+                <abbr title="HyperText Markup Language">
+                    HTML
+                </abbr>
+            </p>
+
+            <pre>
+                Texto pré-formatado.
+                Mantém espaços e quebras de linha.
+            </pre>
+
+            <code>
+                print("Olá, Mundo!")
+            </code>
+
+            <blockquote>
+                "A prática leva à perfeição."
+            </blockquote>
+
+            <address>
+                Rua Exemplo, 123
+            </address>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Rodapé da página.</p>
+    </footer>
+
+</body>
+
+</html>
